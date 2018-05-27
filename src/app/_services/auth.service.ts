@@ -5,6 +5,7 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import { IfObservable } from 'rxjs/observable/IfObservable';
 import { tokenNotExpired, JwtHelper } from 'angular2-jwt';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class AuthService {
@@ -43,7 +44,7 @@ private requestOptions() {
 private handleError(error: any) {
     const applicationError = error.headers.get('Application-Error');
     if (applicationError) {
-        return IfObservable.throw(applicationError);
+        return Observable.throw(applicationError);
     }
     const serverError = error.json();
     let modelStateErrors = '';
@@ -54,7 +55,7 @@ private handleError(error: any) {
             }
         }
     }
-    return IfObservable.throw(
+    return Observable.throw(
         modelStateErrors || 'Server error'
     );
 }
