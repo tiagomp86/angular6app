@@ -1,9 +1,10 @@
 
 import { AuthGuard } from './_guards/auth.guard';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BsDropdownModule, TabsModule } from 'ngx-bootstrap';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 
 import { AppComponent } from './app.component';
@@ -55,7 +56,9 @@ import { FileUploadModule } from 'ng2-file-upload';
     AuthModule,
     TabsModule.forRoot(),
     NgxGalleryModule,
-    FileUploadModule
+    FileUploadModule,
+    ReactiveFormsModule,
+    BsDatepickerModule.forRoot()
   ],
   providers: [
     AuthService,
