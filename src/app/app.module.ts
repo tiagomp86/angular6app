@@ -32,6 +32,7 @@ import { MemberEditlResolver } from './_resolvers/member-edit.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guards';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { FileUploadModule } from 'ng2-file-upload';
+import { ListsResolver } from './_resolvers/lists.resolver';
 
 
 @NgModule({
@@ -72,7 +73,8 @@ import { FileUploadModule } from 'ng2-file-upload';
     MemberDetailResolver,
     MemberListResolver,
     MemberEditlResolver,
-    PreventUnsavedChanges
+    PreventUnsavedChanges,
+    ListsResolver
   ],
   bootstrap: [AppComponent]
 })
