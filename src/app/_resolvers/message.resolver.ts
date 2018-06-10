@@ -5,6 +5,7 @@ import { AlertifyService } from '../_services/alertify.service';
 import { Observable } from 'rxjs/';
 import { Message } from '../_models/message';
 import { AuthService } from '../_services/auth.service';
+import 'rxjs/add/Observable/of';
 
 
 @Injectable()
